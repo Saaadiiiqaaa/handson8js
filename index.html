@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./file2.css">
+</head>
+<body>
+    <h1 class="h1">ARRAYS OF OBJECTS </h1>
+    <p >1. RETRIEVE STUDENT NAME IN CAPS</p>
+    <div>
+    <pre>
+       
+var array = [
+    { name: "john", id: 123 ,marks:98}, 
+    { name: "Baba", id: 101,marks:23}, 
+    { name: "yoga", id: 200,marks:45 },
+{name:"wick",id:115,marks:75}],key,i;
+
+
+const names = [];
+
+for (let i = 0; i < array.length; i++) {
+    if (!array[i].hasOwnProperty('name')) {
+        continue;
+    }
+
+    names.push(array[i].name);
+}
+uppercase =names.map(name => name.toUpperCase());
+console.log(uppercase)
+    
+        
+    </pre>
+   </div>
+   <p>2. details of tsudent who scored more 50</p>
+   <div>
+     <Pre>
+        var arrays= [
+        { name: "john", id: 123 ,marks:98}, 
+        { name: "Baba", id: 101,marks:23}, 
+        { name: "yoga", id: 200,marks:45 },
+        { name:"wick",id:115,marks:75}];
+    
+    const details= arrays.filter(arr=> arr.marks>=50)
+    console.log(details)
+         
+
+ 
+         
+        
+  </Pre>
+</div>
+
+<P> 3. details of studetn who scored more than 50 and id greater than 123</P>
+<div>
+    <pre>
+        var arrays= [
+        { name: "john", id: 123 ,marks:98}, 
+        { name: "Baba", id: 101,marks:23}, 
+        { name: "yoga", id: 200,marks:45 },
+        { name:"wick",id:115,marks:75}];
+    
+    const details= arrays.filter(arr=> arr.marks>=50 && arr.id>=120)
+    console.log(details)
+        
+    </pre>
+</div>
+
+<P>4.SUM TOTAL MARKS OF THE STUDENT 
+</P>
+<div>
+    <pre>
+        var arrays= [
+        { name: "john", id: 123 ,marks:98}, 
+        { name: "Baba", id: 101,marks:23}, 
+        { name: "yoga", id: 200,marks:45 },
+        { name:"wick",id:115,marks:75}];
+    
+    const sum= arrays.reduce((acc,value)=> acc+value.marks,0 );
+    console.log(sum)
+</pre>
+</div>
+<P>5. NAME OF THE STUDENT WHO SCORED MORE THAN 50 </P>
+<div>
+    <pre>
+        const names = [];
+
+        for (let i = 0; i < details.length; i++) {
+            if (!details[i].hasOwnProperty('name')) {
+                continue;
+            }
+        
+            names.push(details[i].name);
+        }
+        console.log(names)
+        
+        
+        
+     </pre>
+</div>
+
+<P>6. SUM OF MARKS STUDENT WITH ID> 120</P>
+<div>
+    <pre>
+        var arrays= [
+    { name: "john", id: 123 ,marks:98}, 
+    { name: "Baba", id: 101,marks:23}, 
+    { name: "yoga", id: 200,marks:45 },
+    { name:"wick",id:115,marks:75}];
+
+const details= arrays.filter(arr=>  arr.id>=120)
+
+
+const sum= details.reduce((acc,value)=> acc+ value.marks,)
+console.log(sum)
+        
+        
+     </pre>
+</div>
+
+<P>7. TOTAL MARKS OF STUDENT WITH GRACE 15 Marks </P>
+<div>
+    <pre>
+        var arrays= [
+        { name: "john", id: 123 ,marks:98}, 
+        { name: "Baba", id: 101,marks:23}, 
+        { name: "yoga", id: 200,marks:45 },
+        { name:"wick",id:115,marks:75}];
+    
+    const details= arrays.filter(arr=> arr.marks<50 );
+    console.log(details);
+    arr=[];
+    details.forEach(function(obj){
+        arr.push(obj.marks)
+        
+    });
+    console.log(arr)
+    
+    const sum= arr.reduce((acc,value)=> acc+value ,0 );
+    console.log(sum)
+    
+        
+        
+     </pre>
+</div>
+
+<P>8. ARRAYS OF OBJECTS </P>
+<div>
+    <pre>
+        
+var users = {
+    user : {username: "user9110252username", genrePref: "user9110252genre"},
+    jon : {username: 'Jon', genrePref: 'rock'},
+    lucy : {username: 'Lucy', genrePref: 'pop'},
+    mike : {username: 'Mike', genrePref: 'rock'},
+    luke : {username: 'Luke', genrePref: 'house'},
+    james : {username: 'James', genrePref: 'house'},
+    dave : {username: 'Dave', genrePref: 'bass'},
+    sarah : {username: 'Sarah', genrePref: 'country'},
+    natalie : {username: 'Natalie', genrePref: 'bass'}
+}
+
+// Users array
+var allUsers = [];
+
+// Populate users array
+for(var key in users) {
+    allUsers.push(users[key]);
+}
+        
+        
+     </pre>
+</div>
+</body>
+</html>
